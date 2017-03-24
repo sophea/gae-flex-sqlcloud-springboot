@@ -118,7 +118,7 @@ update connection with pom.xml
     
 ```
 Datasource : MainApplication.java
-
+```
  @Bean
   public DataSource dataSource() {
       final String propsFile = "db.properties";
@@ -131,7 +131,10 @@ Datasource : MainApplication.java
       }
       return null;
   }
-  
+ ```
+ Other config : db.properties
+ 
+ ```
   //src/main/resources/db.properties
   #driverClassName=${database.driver}
   url=${database.url}

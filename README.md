@@ -104,19 +104,10 @@ update connection with pom.xml
       </properties>
       
 ```
+
 1. Connection to localhost MySQL 
-```
-```
 
 update connection with pom.xml
-```
-<properties>
-        <database.name>sample</database.name>
-        <sqlcloud.instance>flex-helloworld:asia-northeast1:sm-sample</sqlcloud.instance>
-        <database.username>root</database.username>
-        <database.password>root123</database.password>
-        <database.url>jdbc:mysql://google/${database.name}?cloudSqlInstance=${sqlcloud.instance}&amp;socketFactory=com.google.cloud.sql.mysql.SocketFactory</database.url>
-      </properties>
       
 ```
 <!-- mysql connection localhost -->

@@ -164,11 +164,13 @@ public class CategoryDaoImpl implements CategoryDao {
     ...
     }
 ```
+
 ## Create MySQL localhost database 
 
 1. import schema.sql
+
 ```
-$ mysql -uroot -proot < schema.sql;
+mysql -uroot -proot < schema.sql;
 
 ```
 

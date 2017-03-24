@@ -13,7 +13,7 @@
     <appengine.maven.plugin>1.0.0</appengine.maven.plugin>
     <!-- mysql connection localhost -->
     <database.driver>com.mysql.jdbc.Driver</database.driver> 
-    <database.url>jdbc:mysql://localhost:3306/rupp_test?autoReconnect=true&amp;serverTimezone=UTC</database.url>
+    <database.url>jdbc:mysql://localhost:3306/local_test?autoReconnect=true&amp;serverTimezone=UTC</database.url>
     <database.username>root</database.username>
     <database.password>root</database.password>
     
@@ -148,7 +148,7 @@
           <deploy.promote>true</deploy.promote> <!~~ DEFAULT value ~~>
           <deploy.stopPreviousVersion>true</deploy.stopPreviousVersion>   <!~~ DEFAULT value ~~>
  -->
-           <version>springboot-test</version>    <!--  app version -->
+           <version>sqlcloud-test</version>    <!--  app version -->
            <project>flex-helloworld</project>  <!--  gae : project id -->
            <logLevel>debug</logLevel>
         </configuration>

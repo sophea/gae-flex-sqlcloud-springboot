@@ -91,7 +91,7 @@ These settings should be revisited for production use.
   <version>1.0.2</version>
 </dependency>
 ```
-1. Sample connection to MySQL
+1. Sample connection to MySQL Google Cloud
 
 update connection with pom.xml
 ```
@@ -104,6 +104,27 @@ update connection with pom.xml
       </properties>
       
 ```
+1. Connection to localhost MySQL 
+```
+```
+
+update connection with pom.xml
+```
+<properties>
+        <database.name>sample</database.name>
+        <sqlcloud.instance>flex-helloworld:asia-northeast1:sm-sample</sqlcloud.instance>
+        <database.username>root</database.username>
+        <database.password>root123</database.password>
+        <database.url>jdbc:mysql://google/${database.name}?cloudSqlInstance=${sqlcloud.instance}&amp;socketFactory=com.google.cloud.sql.mysql.SocketFactory</database.url>
+      </properties>
+      
+```
+<!-- mysql connection localhost -->
+    <database.driver>com.mysql.jdbc.Driver</database.driver> 
+    <database.url>jdbc:mysql://localhost:3306/local_test?autoReconnect=true&amp;serverTimezone=UTC</database.url>
+    <database.username>root</database.username>
+    <database.password>root</database.password>
+    
 ```
 Datasource : MainApplication.java
 
@@ -143,6 +164,14 @@ public class CategoryDaoImpl implements CategoryDao {
     ...
     }
 ```
+## Create MySQL localhost database 
+
+1. import schema.sql
+```
+$ mysql -uroot -proot < schema.sql;
+
+```
+
 ## Run the application locally
 
 1. Set the correct Cloud SDK project via `gcloud config set project
